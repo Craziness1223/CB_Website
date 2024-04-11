@@ -38,7 +38,7 @@
       </a>
       <h1>Welcome to Club Bamboo</h1>
       <p id="current-date"></p>
-      <p class="happy-today">Happy Today Day</p> <!-- Added Happy Today Day -->
+      <p class="happy-today" id="greeting"></p> <!-- Added Happy Today Day -->
   </header>
 
   <main>
@@ -58,5 +58,13 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // JavaScript to display the greeting based on the current day
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDate = new Date();
+    const currentDayOfWeek = daysOfWeek[currentDate.getDay()];
+    const greetingElement = document.getElementById("greeting");
+    greetingElement.textContent = "Happy " + currentDayOfWeek;
+  </script>
 </body>
 </html>
