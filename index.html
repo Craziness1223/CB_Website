@@ -1,4 +1,5 @@
 
+
 <!--------------------------------------------------------#
 #                                                         #
 #      https://craziness1223.github.io/CB_Website/        #
@@ -13,6 +14,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community Center Website</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* CSS for the boxes */
+    .box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,12 +31,12 @@
   </header>
 
   <main>
-    <section id="Oh wow much testing">
+    <section id="menu" class="box"> <!-- Added class "box" -->
       <h2>Menu</h2>
       <ul id="menu-items"></ul>
     </section>
 
-    <section id="content">
+    <section id="content" class="box"> <!-- Added class "box" -->
       <h2>Today's Events</h2>
       <div id="events"></div>
     </section>
@@ -40,3 +49,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
