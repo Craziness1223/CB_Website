@@ -70,10 +70,7 @@
     <section id="Karaoke List" class="box"> <!-- Added class "box" -->
       <h2>Karaoke</h2>
       <ul id="Karaoke-names">
-        <li>1. Name 1</li>
-        <li>2. Name 2</li>
-        <li>3. Name 3</li>
-        <!-- Add more items as needed -->
+        <!-- Names will be added dynamically here -->
       </ul>
     </section>
 
@@ -95,6 +92,14 @@
     const currentDayOfWeek = daysOfWeek[currentDate.getDay()];
     const greetingElement = document.getElementById("greeting");
     greetingElement.textContent = "Happy " + currentDayOfWeek;
+
+    // JavaScript to dynamically add names to the karaoke list
+    const karaokeList = document.getElementById("Karaoke-names");
+    for (let i = 1; i <= 25; i++) {
+      const listItem = document.createElement("li");
+      listItem.textContent = i + ". Name " + i;
+      karaokeList.appendChild(listItem);
+    }
   </script>
 </body>
 </html>
